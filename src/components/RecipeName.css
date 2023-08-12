@@ -1,0 +1,41 @@
+.recipe-name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.recipe-name-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    background: rgb(234, 225, 225);
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.recipe-name-input::placeholder {
+    color: black;
+}
+
+.recipe-name-input:focus {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+    .recipe-name-container {
+        flex-direction: column; /* Stack input vertically on smaller screens */
+        align-items: flex-start; /* Align input to the left on smaller screens */
+    }
+
+    .recipe-name-input {
+        width: 100%;
+        max-width: none; /* Allow input to expand to full width on smaller screens */
+        margin-bottom: 10px; /* Add spacing between input and button */
+    }
+}

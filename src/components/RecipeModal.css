@@ -1,0 +1,103 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    width: 80%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text content */
+    padding: 20px;
+    position: relative;
+    max-height: 80vh; /* Adjust the maximum height */
+    overflow-y: auto; /* Add scroll for content overflow */
+    padding: 20px 40px;
+}
+.modal-content::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners of the thumb */
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color of the scrollbar thumb on hover */
+}
+
+.modal-content.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover; /* Preserve aspect ratio */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.modal-content h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #333;
+}
+
+.modal-content span {
+    color: #777;
+    margin: 5px 0;
+}
+
+.modal-content h3 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+    color: #333;
+    text-align: left;
+}
+
+.modal-content p {
+    margin: 0 0 20px;
+    color: #555;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.modal-content ul {
+    margin: 0 0 20px;
+    color: #555;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.modal-content li {
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+/* Minor adjustments for responsive design */
+@media screen and (max-width: 767px) {
+    .modal-content {
+        width: 90%;
+        margin: 10px;
+    }
+}
